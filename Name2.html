@@ -1,46 +1,318 @@
-<html>
-  <head>
-     <meta charset="utf-8">
-  <title>วันพ่อ</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  body{
-  font-family: "Charmonman", cursive;
-  font-weight: 400;
-  font-style: normal;
-    mark{background: linear-gradient(45deg,pink,skyblue);
-    color:black;}
-    header{background: radial-gradient(lightblue,pink,white,gray);padding: 30px; text-align:center;border-radius: 10px}
-section{background: linear-gradient(purple,gold,white); padding: 15px; margin: 20px auto; width: 70%; border-radius:10px;}
-  p{text-indent: 2em;}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติส่วนตัว - ณัฏฐกิตติ์</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* พื้นหลังสีเทาอ่อนแบบเว็บทั่วไป */
+            color: #333;
+            line-height: 1.6;
+        }
 
-  .zoom:hover{transform: scale(1.5); cursor:pointer;}
+        /* จำลองแถบเมนูด้านบนของ Google Sites */
+        nav {
+            background-color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-  img:hover{animation: glowcolors 1.2s infinite alternate;}
-  @keyframes glowcolors
-  {
-    0% {box-shadow: 0 0 20px hotpink;}
-    25% {box-shadow: 0 0 20px skyblue;}
-    50% {box-shadow: 0 0 20px gold;}
-    75% {box-shadow: 0 0 20px darkviolet;}
-    100% {box-shadow: 0 0 20px red;}
-  }
-  .blink-bg{
-    animation: blinkbg 1s infinite alternate;
-    padding: 3px 6px;}
-  @keyframes blinkbg
-  { 0% {background: pink;}
-    100% {background: skyblue;}
-  }
-</style>
-  </head>
-  <body background="https://png.pngtree.com/thumb_back/fh260/background/20210330/pngtree-lawn-stepping-spring-grass-image_596269.jpg">
-   <haeder>
-    <h1><marquee><mark> ประวัติส่วนตัว🌹 </mark></marquee></h1>
-  </haeder>
-    <br><br>
-    <img src="work.jpg" width="400" height="400" class="zoom">
-  </body>
+        nav .site-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #444;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #000;
+        }
+
+        /* พื้นที่เนื้อหาหลัก */
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: #222;
+        }
+
+        /* ส่วนหัวข้อหลัก */
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* ส่วนข้อมูลส่วนตัว */
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .profile-img {
+            flex: 0 0 300px;
+            text-align: center;
+        }
+
+        .profile-img img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        
+        .profile-img img:hover {
+            transform: scale(1.02);
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .profile-info h2 {
+            margin-top: 0;
+            color: #d93025; /* สีแดงเข้มคล้ายหัวข้อในเว็บตัวอย่าง */
+        }
+
+        .info-item {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        /* ส่วนกิจกรรม (Grid รูปภาพ) */
+        .activities-section {
+            margin-top: 50px;
+        }
+        
+        .activities-header {
+            background-color: #ffe0b2; /* สีพื้นหลังหัวข้อแบบพาสเทล */
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .activity-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: #ddd; /* สีเทาแทนรูป */
+        }
+
+        .activity-card p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* ส่วนลิงก์ผลงาน */
+        .works-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .btn-link {
+            display: inline-block;
+            background-color: #d93025;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn-link:hover {
+            background-color: #b01c15;
+        }
+
+        /* ส่วนท้าย (Footer) */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer a {
+            color: #d93025;
+            text-decoration: none;
+        }
+
+        /* Responsive มือถือ */
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .profile-info {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="site-name">Portfoilio: ณัฏฐกิตติ์</div>
+        <ul>
+            <li><a href="#">หน้าแรก</a></li>
+            <li><a href="#" style="color:black; border-bottom: 2px solid #d93025;">ประวัติส่วนตัว</a></li>
+            <li><a href="#">ผลงาน</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <div class="page-header">
+            <h1>ประวัติส่วนตัว 💛</h1>
+        </div>
+
+        <div class="profile-section">
+            <div class="profile-img">
+                <img src="work.jpg" alt="รูปโปรไฟล์ ณัฏฐกิตติ์">
+            </div>
+            
+            <div class="profile-info">
+                <h2>ด.ช.ณัฏฐกิตติ์ ดาวทองประเสริฐ</h2>
+                
+                <div class="info-item">
+                    <span class="info-label">ชื่อเล่น :</span> ณัฏ &nbsp;&nbsp; 
+                    <span class="info-label">อายุ :</span> 14 ปี
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">โรงเรียน :</span> สวนกุหลาบวิทยาลัย 🌹
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">ระดับชั้น :</span> มัธยมศึกษาปีที่ 2 ห้อง 211
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">ครูที่ปรึกษา :</span> ครูสาลินี ประเสริฐ 💖
+                </div>
+
+                <hr style="border: 0; border-top: 1px dashed #ccc; margin: 20px 0;">
+
+                <div class="info-item">🎮 <span class="info-label">สิ่งที่ชอบทำ :</span> เล่นเกม</div>
+                <div class="info-item">🦷 <span class="info-label">สิ่งที่อยากเป็น :</span> หมอฟัน</div>
+                <div class="info-item">🟡 <span class="info-label">สีที่ชอบ :</span> เหลือง</div>
+                <div class="info-item">🥭 <span class="info-label">ผลไม้ที่ชอบ :</span> มะม่วงดิบ</div>
+                <div class="info-item">🥤 <span class="info-label">เครื่องดื่มที่ชอบ :</span> น้ำแดง</div>
+                
+                <hr style="border: 0; border-top: 1px dashed #ccc; margin: 20px 0;">
+
+                <div class="info-item">📞 <span class="info-label">เบอร์โทร :</span> 098-716-3246</div>
+                <div class="info-item">📘 <span class="info-label">Facebook :</span> -</div>
+            </div>
+        </div>
+
+        <div class="activities-section">
+            <h2 class="activities-header">🌻 กิจกรรมระดับ ม.2 ของฉัน 🥰</h2>
+            
+            <div class="activity-grid">
+                <div class="activity-card">
+                    <img src="https://via.placeholder.com/300x200?text=Activity+1" alt="กิจกรรม">
+                    <p>กิจกรรมเปิดเทอม</p>
+                </div>
+                <div class="activity-card">
+                    <img src="https://via.placeholder.com/300x200?text=Activity+2" alt="กิจกรรม">
+                    <p>กิจกรรมวันปีใหม่</p>
+                </div>
+                <div class="activity-card">
+                    <img src="https://via.placeholder.com/300x200?text=Activity+3" alt="กิจกรรม">
+                    <p>กิจกรรมเข้าค่ายลูกเสือ</p>
+                </div>
+                <div class="activity-card">
+                    <img src="https://via.placeholder.com/300x200?text=Activity+4" alt="กิจกรรม">
+                    <p>กิจกรรมวันครู</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="works-section">
+            <h3>ผลงานเว็บไซต์ของฉัน 😘</h3>
+            <p>กดปุ่มเพื่อชมเว็บไซต์ 👉</p>
+            <a href="#" class="btn-link">วันพ่อ</a>
+            <a href="#" class="btn-link">วันปีใหม่</a>
+            <a href="#" class="btn-link">วันเด็ก</a>
+        </div>
+
+        <footer>
+            <p>โรงเรียนสวนกุหลาบวิทยาลัย 🩵</p>
+            <p>เลขที่ 88 ถนนตรีเพชร แขวงวังบูรพาภิรมย์ เขตพระนคร กรุงเทพมหานคร</p>
+            <div style="margin-top: 10px;">
+                <a href="#">[Facebook]</a> &nbsp;
+                <a href="#">[Instagram]</a> &nbsp;
+                <a href="#">[Website]</a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
 </html>
