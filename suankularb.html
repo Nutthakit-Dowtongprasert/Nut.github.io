@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำโรงเรียนสวนกุหลาบวิทยาลัย</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ส่วนของการตกแต่ง (CSS) */
+        body {
+            font-family: 'Sarabun', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* แถบเมนู */
+        nav {
+            background-color: #002147; /* สีกรมท่า */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ff69b4; /* สีชมพูเมื่อเอาเมาส์ชี้ */
+            border-radius: 5px;
+        }
+
+        /* ส่วนหัวข้อหลัก (Banner) */
+        header {
+            /* ไล่สี ชมพู-ฟ้า */
+            background: linear-gradient(135deg, #ff99cc 0%, #87cefa 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: #002147;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* การจัดวางเนื้อหา */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        section {
+            padding: 40px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h2 {
+            color: #ff007f; /* สีชมพูเข้ม */
+            border-left: 5px solid #00bfff; /* ขีดสีฟ้า */
+            padding-left: 15px;
+        }
+
+        /* กล่องสำหรับรูปภาพ (Placeholder) */
+        .img-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            border-radius: 10px;
+            margin: 20px 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* ส่วนผู้จัดทำ */
+        .creator-box {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #87cefa;
+            margin-top: 20px;
+        }
+
+        /* แผนที่ */
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        /* สีชมพู-ฟ้า สำหรับข้อความเน้น */
+        .sk-colors {
+            font-weight: bold;
+        }
+        .pink { color: #ff007f; }
+        .blue { color: #00bfff; }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">หน้าแรก</a>
+        <a href="#history">ประวัติ</a>
+        <a href="#vision">วิสัยทัศน์</a>
+        <a href="#symbol">สัญลักษณ์</a>
+        <a href="#building">อาคาร</a>
+        <a href="#map">แผนที่</a>
+    </nav>
+
+    <section id="home">
+        <header>
+            <h1>โรงเรียนสวนกุหลาบวิทยาลัย</h1>
+            <p>Suankularb Wittayalai School</p>
+        </header>
+
+        <div class="container">
+            
+            <div class="img-placeholder" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Suankularb_Wittayalai_School_Long_Building_2011.jpg/1200px-Suankularb_Wittayalai_School_Long_Building_2011.jpg');">
+                </div>
+
+            <div class="ณัฏฐกิตติ์ ดาวทองประเสริฐ ห้อง 211 เลขที่8">
+                <h3>เว็บไซต์นี้จัดทำโดย</h3>
+                <p><strong>เด็กชาย/นาย รักเรียน เพียรศึกษา</strong></p>
+                <p>เลขที่ 99 ชั้นมัธยมศึกษาปีที่ 1/1</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="history">
+            <h2>ประวัติความเป็นมา</h2>
+            
+            <p>โรงเรียนสวนกุหลาบวิทยาลัย ก่อตั้งโดย <strong>พระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว (รัชกาลที่ 5)</strong> โดยทรงพระกรุณาโปรดเกล้าฯ ให้จัดตั้งขึ้นในพระบรมมหาราชวัง เมื่อปี พ.ศ. 2425</p>
+            <p>ถือเป็นโรงเรียนรัฐบาลแห่งแรกของประเทศไทย เพื่อให้โอกาสแก่ประชาชนทุกชนชั้นได้ศึกษาเล่าเรียนอย่างเท่าเทียมกัน ตามพระราชปณิธาน "บรรดาเจ้านาย ราชตระกูล มีโอกาสเล่าเรียนได้เพียงใด ราษฎรสามัญก็มีโอกาสเล่าเรียนได้เพียงนั้น"</p>
+        </section>
+
+        <section id="vision">
+            <h2>วิสัยทัศน์ และ พันธกิจ</h2>
+            <h3>วิสัยทัศน์ (Vision)</h3>
+            <blockquote>
+                "เป็นผู้นำทางวิชาการ สืบสานพระราชปณิธาน สร้างสรรค์สังคมไทย ก้าวไกลสู่สากล"
+            </blockquote>
+            
+            <h3>พันธกิจ (Mission)</h3>
+            <ul>
+                <li>ส่งเสริมความเป็นเลิศทางวิชาการ</li>
+                <li>ปลูกฝังคุณธรรม จริยธรรม และความเป็นสุภาพบุรุษสวนกุหลาบ</li>
+                <li>พัฒนาศักยภาพครูและบุคลากร</li>
+                <li>บริหารจัดการด้วยระบบคุณภาพ</li>
+            </ul>
+        </section>
+
+        <section id="symbol">
+            <h2>สัญลักษณ์ของโรงเรียน</h2>
+            
+            <div style="text-align: center;">
+                <img src="https://upload.wikimedia.org/wikipedia/th/7/76/Suankularb_Wittayalai_School_Logo.png" alt="ตราโรงเรียน" width="150">
+            </div>
+            
+            <h3>สีประจำโรงเรียน</h3>
+            <p class="sk-colors">
+                <span class="pink">"ชมพู"</span> - <span class="blue">"ฟ้า"</span>
+            </p>
+            <ul>
+                <li><strong class="pink">สีชมพู</strong> หมายถึง ความสุภาพอ่อนโยน ความรัก ความสามัคคี (สีประจำวันพระราชสมภพ ร.5)</li>
+                <li><strong class="blue">สีฟ้า</strong> หมายถึง ความแข็งแรง ความอดทน ความสง่างาม (สีประจำวันพระราชสมภพของสมเด็จพระศรีพัชรินทราบรมราชินีนาถ)</li>
+            </ul>
+
+            <h3>คติพจน์</h3>
+            <p><strong>"สุวิชาโน ภวํ โหติ"</strong> (ผู้รู้ดี เป็นผู้เจริญ)</p>
+        </section>
+
+        <section id="building">
+            <h2>อาคารโรงเรียน</h2>
+            <p>อาคารที่เป็นสัญลักษณ์สำคัญที่สุดของโรงเรียนคือ <strong>"ตึกยาว" (The Long Building)</strong></p>
+            <div class="img-placeholder" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Suankularb_Wittayalai_School_Long_Building_2011.jpg/800px-Suankularb_Wittayalai_School_Long_Building_2011.jpg');"></div>
+            <p>ตึกยาว เป็นสถาปัตยกรรมแบบนีโอคลาสสิก มีความยาวที่สุดในประเทศไทยในสมัยนั้น ได้รับรางวัลอนุรักษ์ศิลปสถาปัตยกรรมดีเด่น เป็นความภาคภูมิใจของชาวสวนกุหลาบทุกคน</p>
+        </section>
+
+        <section id="map">
+            <h2>แผนที่โรงเรียน</h2>
+            <p>ที่ตั้ง: ถนนตรีเพชร แขวงวังบูรพาภิรมย์ เขตพระนคร กรุงเทพมหานคร</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.787686524584!2d100.49651531483017!3d13.742354990353457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29904777b1001%3A0xf6c8053a4734305e!2zเน‚เธฃเธ‡เน€เธฃเธตเธขเธ™เธชเธงเธ™เธ เธธเธซเธฅเธฒเธšเธงเธดเธ—เธขเธฒเธฅเธฑเธข!5e0!3m2!1sth!2sth!4v1629789123456!5m2!1sth!2sth" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Suankularb Wittayalai School Project. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
